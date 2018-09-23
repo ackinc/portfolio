@@ -24,7 +24,7 @@ class SidebarComponent extends React.Component {
 class MainComponent extends React.Component {
     render() {
         return (
-            <main><h1>Anirudh Nimmagadda</h1></main>
+            <main><h1>ANIRUDH NIMMAGADDA</h1></main>
         );
     }
 }

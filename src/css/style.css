@@ -60,3 +60,16 @@ nav ul li:hover {
 nav ul li img {
     width: 50%;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 0 0;
+}
+
+main h1 {
+    color: white;
+    font-size: 4em;
+}
