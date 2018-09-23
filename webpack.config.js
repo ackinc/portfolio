@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './index.js',
+    entry: './src/js/index.js',
     module: {
         rules: [
             {
@@ -14,7 +14,8 @@ module.exports = {
         ]
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'dist', 'js'),
+        publicPath: 'dist/js',
         filename: 'bundle.js'
     },
     mode: process.env.MODE || "development"
