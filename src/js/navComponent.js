@@ -5,7 +5,7 @@ class NavComponent extends React.Component {
         return (
             <div className="strip">
                 <div className="logo">
-                    <img src="./images/vscode-200x200.png" alt="VSCode" title="Welcome" />
+                    <a href=""><img src="./images/vscode-200x200.png" alt="VSCode" title="Welcome" /></a>
                 </div>
                 <nav>
                     <ul>
