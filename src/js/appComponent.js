@@ -8,7 +8,7 @@ class AppComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            curView: this.props.data[0].name
+            curView: this.props.data[0].__name
         };
         this.changeState = this.changeState.bind(this);
     }
@@ -18,7 +18,7 @@ class AppComponent extends React.Component {
     }
 
     render() {
-        const activeIdx = this.props.data.findIndex(elem => elem.name === this.state.curView);
+        const activeIdx = this.props.data.findIndex(elem => elem.__name === this.state.curView);
         const curViewObj = this.props.data[activeIdx];
         return (
             <div id="container">

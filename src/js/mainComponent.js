@@ -20,7 +20,7 @@ function HomeComponent(props) {
 }
 
 function MainComponent(props) {
-    if (props.data.name === 'home') return <HomeComponent data={props.data} />;
+    if (props.data.__name === 'home') return <HomeComponent data={props.data} />;
 
     return <main><h1>PLACEHOLDER</h1></main>;
 }

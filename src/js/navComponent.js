@@ -11,11 +11,11 @@ class NavComponent extends React.Component {
                     <ul>
                         {this.props.elems.map((elem, idx) => {
                             return (
-                                <li onClick={() => this.props.handleClick(elem.name)}
-                                    key={elem.name}
+                                <li onClick={() => this.props.handleClick(elem.__name)}
+                                    key={elem.__name}
                                     className={this.props.activeIdx === idx ? 'active' : ''}>
                                     <img src={elem['nav-icon']}
-                                        alt={elem.name} title={elem.name} />
+                                        alt={elem.__name} title={elem.__name} />
                                 </li>
                             );
                         })}
