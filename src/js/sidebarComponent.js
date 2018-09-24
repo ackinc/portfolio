@@ -6,7 +6,7 @@ function SidebarComponent(props) {
             <h1>PROJECTS</h1>
             {props.data.map(elem => {
                 return (
-                    <div className="project">
+                    <div className="project" key={elem.name}>
                         <p className="project-title"><span className="project-name">{elem.name}</span><span className="project-type">({elem.type})</span></p>
                         <p className="project-company-desc">About company: {elem.company_desc}</p>
                     </div>
