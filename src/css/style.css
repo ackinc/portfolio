@@ -92,6 +92,7 @@ aside h1 {
     font-weight: bold;
     text-align: center;
     margin-bottom: 25px;
+    opacity: 0.6;
 }
 
 aside .project {
@@ -99,7 +100,7 @@ aside .project {
     font-size: 0.6em;
 
     height: 80px;
-
+    opacity: 0.6;
     padding: 20px 10px;
     position: relative;
 }
