@@ -24,7 +24,7 @@ class AppComponent extends React.Component {
             <div id="container">
                 <NavComponent elems={this.props.data} activeIdx={activeIdx} handleClick={this.changeState} />
                 <SidebarComponent data={curViewObj.data || []} />
-                <MainComponent />
+                <MainComponent data={curViewObj} />
             </div>
         );
     }

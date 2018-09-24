@@ -1,11 +1,28 @@
 import React from 'react';
 
-class MainComponent extends React.Component {
-    render() {
-        return (
-            <main><h1>ANIRUDH NIMMAGADDA</h1></main>
-        );
-    }
+function HomeComponent(props) {
+    return (
+        <main>
+            <div id="content">
+                <div className="display-pic">
+                    <img src={props.data['display-pic']} alt="display picture" />
+                </div>
+
+                <div className="elevator-intro">
+                    <h1 className="name">{props.data['dev-name'].toUpperCase()}</h1>
+                    <p className="tagline">{props.data.tagline}</p>
+                </div>
+
+                <p className="about">{props.data.about}</p>
+            </div>
+        </main>
+    );
+}
+
+function MainComponent(props) {
+    if (props.data.name === 'home') return <HomeComponent data={props.data} />;
+
+    return <main><h1>PLACEHOLDER</h1></main>;
 }
 
 export default MainComponent;

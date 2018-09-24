@@ -127,6 +127,8 @@ aside .project span.project-name {
 
 main {
     background-color: #1e1e1e;
+    text-align: center;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +136,25 @@ main {
     flex: 1 0 0;
 }
 
-main h1 {
+main .display-pic img {
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+
+    max-width: 150px;
+}
+
+main .elevator-intro {
     color: white;
-    font-size: 4em;
+    margin: 40px 0;
+}
+
+main h1.name {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+main p.about {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+    width: 60%;
 }
