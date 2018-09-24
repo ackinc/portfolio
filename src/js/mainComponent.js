@@ -9,7 +9,7 @@ function HomeComponent(props) {
                 </div>
 
                 <div className="elevator-intro">
-                    <h1 className="name">{props.data['dev-name'].toUpperCase()}</h1>
+                    <h1 className="name">{props.data.name.toUpperCase()}</h1>
                     <p className="tagline">{props.data.tagline}</p>
                 </div>
 
