@@ -1,0 +1,37 @@
+{
+    "home": {
+        "order": 1,
+        "nav-icon": "./images/home-white-64x64.png"
+    },
+    "projects": {
+        "order": 2,
+        "nav-icon": "./images/code-white-64x64.png",
+        "data": [
+            {
+                "name": "Newslaundry",
+                "type": "Contract",
+                "website": "https://www.newslaundry.com/",
+                "company_desc": "A media critique, news and current affairs portal",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru"
+            },
+            {
+                "name": "Celes Care",
+                "type": "Contract",
+                "website": "http://www.celes.care (no longer operational)",
+                "company_desc": "An online healthcare consultation portal",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru"
+            },
+            {
+                "name": "Trello Clone",
+                "type": "Personal",
+                "website": "http://13.126.159.127.xip.io/",
+                "company_desc": "Not applicable",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru"
+            }
+        ]
+    },
+    "contact": {
+        "order": 3,
+        "nav-icon": "./images/contact-white-64x64.png"
+    }
+}

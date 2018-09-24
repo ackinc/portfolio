@@ -1,35 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class SidebarComponent extends React.Component {
-    render() {
-        return (
-            <aside>
-                <div className="logo">
-                    <img src="./images/vscode-200x200.png" alt="VSCode" title="Welcome" />
-                </div>
-                <nav>
-                    <ul>
-                        <li><img src="./images/home-white-64x64.png" alt="Home" title="Home" /></li>
-                        <li><img src="./images/code-white-64x64.png" alt="Projects" title="Projects" /></li>
-                        <li><img src="./images/contact-white-64x64.png" alt="Contact" title="Contact" /></li>
-                    </ul>
-                </nav>
-                <div className="sidebar"></div>
-            </aside>
-        );
-    }
-}
+import AppComponent from './appComponent';
 
-class MainComponent extends React.Component {
-    render() {
-        return (
-            <main><h1>ANIRUDH NIMMAGADDA</h1></main>
-        );
+import rawData from '../../data.json';
+
+// webpack can only import JSON data that is inside an object
+// we want an array, since the nav elements have a natural ordering
+function processRawData(rawData) {
+    const navKeys = Object.keys(rawData);
+    const navElems = [];
+    for (let i = 0; i < navKeys.length; i += 1) {
+        navElems.push(Object.assign({ name: navKeys[i] }, rawData[navKeys[i]]));
     }
+    navElems.sort((a, b) => a.order - b.order);
+
+    return navElems;
 }
 
 ReactDOM.render(
-    <div id="container"><SidebarComponent /><MainComponent /></div>,
+    <AppComponent data={processRawData(rawData)} />,
     document.querySelector('#root')
 );
