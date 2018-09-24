@@ -127,34 +127,43 @@ aside .project span.project-name {
 
 main {
     background-color: #1e1e1e;
-    text-align: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     flex: 1 0 0;
 }
 
-main .display-pic img {
+#home-page-content {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    height: 100%;
+}
+
+#home-page-content .display-pic img {
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
 
     max-width: 150px;
 }
 
-main .elevator-intro {
+#home-page-content .elevator-intro {
     color: white;
-    margin: 40px 0;
 }
 
-main h1.name {
+#home-page-content h1.name {
     font-size: 3em;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
-main p.about {
+#home-page-content p.about {
     color: rgba(255, 255, 255, 0.4);
     margin: 0 auto;
     width: 60%;
+}
+
+#home-page-content .social img {
+    margin: 0px 20px;
+    width: 32px;
 }
