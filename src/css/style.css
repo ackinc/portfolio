@@ -116,6 +116,7 @@ aside .project p {
 aside .project p.project-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 aside .project span.project-name {
