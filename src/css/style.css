@@ -64,6 +64,10 @@ nav ul li {
     width: 100%;
 }
 
+nav ul li.active {
+    opacity: 1;
+}
+
 nav ul li:hover {
     opacity: 1;
     cursor: pointer;

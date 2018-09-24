@@ -18,10 +18,11 @@ class AppComponent extends React.Component {
     }
 
     render() {
-        const curViewObj = this.props.data[this.props.data.findIndex(elem => elem.name === this.state.curView)];
+        const activeIdx = this.props.data.findIndex(elem => elem.name === this.state.curView);
+        const curViewObj = this.props.data[activeIdx];
         return (
             <div id="container">
-                <NavComponent elems={this.props.data} handleClick={this.changeState} />
+                <NavComponent elems={this.props.data} activeIdx={activeIdx} handleClick={this.changeState} />
                 <SidebarComponent data={curViewObj.data || []} />
                 <MainComponent />
             </div>
