@@ -170,3 +170,26 @@ main {
     margin: 0px 20px;
     width: 32px;
 }
+
+#contact-page-content {
+    color: white;
+    padding: 20px;
+}
+
+#contact-page-content h1 {
+    font-size: 3em;
+    margin: 10px 0 50px 0;
+}
+
+#contact-page-content form input, #contact-page-content form textarea {
+    background-color: transparent;
+    border: 0px;
+    display: block;
+    
+    height: 30px;
+    width: 100%;
+}
+
+#contact-page-content form input:active {
+    border: 2px solid white;
+}

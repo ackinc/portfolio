@@ -8,7 +8,8 @@ class AppComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            curView: this.props.data[0].__name
+            // curView: this.props.data[0].__name
+            curView: 'contact'
         };
         this.changeState = this.changeState.bind(this);
     }

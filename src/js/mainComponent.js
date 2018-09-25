@@ -29,8 +29,25 @@ function HomeComponent(props) {
     );
 }
 
+function ContactComponent(props) {
+    return (
+        <main>
+            <div id="contact-page-content">
+                <h1>Contact Me</h1>
+                <form>
+                    <input type="text" name="name" placeholder="Name" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <textarea name="message" placeholder="Message" ></textarea>
+                    <input type="submit" />
+                </form>
+            </div>
+        </main>
+    );
+}
+
 function MainComponent(props) {
     if (props.data.__name === 'home') return <HomeComponent data={props.data} />;
+    if (props.data.__name === 'contact') return <ContactComponent data={props.data} />;
 
     return <main><h1>PLACEHOLDER</h1></main>;
 }
