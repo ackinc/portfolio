@@ -1,5 +1,19 @@
 #about {
-  margin-left: 40px;
+  display: flex;
+}
+
+#about #gutter {
+  color: #5C5C5C;
+  padding-top: 7px;
+  padding-right: 15px;
+}
+
+#about #gutter div {
+  display: flex;
+  justify-content: right;
+
+  height: 18px;
+  width: 30px;
 }
 
 .renderjson a              {
