@@ -15,9 +15,9 @@ export default function FileListComponent(props) {
                         <span>
                             {`${file.name}${file['explorer-extension']}`}
                         </span>
-                        {file.children ?
+                        {/* {file.children ?
                             <FileListComponent files={file.children} /> :
-                            null}
+                            null} */}
                     </NavLink>
                 </li>
             ))}
