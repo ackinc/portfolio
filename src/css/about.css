@@ -1,0 +1,20 @@
+#about {
+  margin-left: 40px;
+}
+
+.renderjson a              {
+  color: #C38D5B;
+  text-decoration: underline;
+}
+.renderjson .disclosure    {
+  color: crimson;
+  font-size: 150%;
+}
+.renderjson .syntax        { color: grey; }
+.renderjson .string        { color: #C38D5B; }
+.renderjson .number        { color: cyan; }
+.renderjson .boolean       { color: plum; }
+.renderjson .key           { color: #9CDCFE; }
+.renderjson .keyword       { color: lightgoldenrodyellow; }
+.renderjson .object.syntax { color: #CEC895; }
+.renderjson .array.syntax  { color: #CEC895; }

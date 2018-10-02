@@ -18,5 +18,9 @@ module.exports = {
         publicPath: 'dist/js',
         filename: 'bundle.js'
     },
+    devServer: {
+        port: 3000,
+        historyApiFallback: true
+    },
     mode: process.env.MODE || "development"
 };

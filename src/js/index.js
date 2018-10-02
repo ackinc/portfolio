@@ -1,24 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import AppComponent from './appComponent';
+import AppComponent from './components/appComponent';
 
-import rawData from '../../data.json';
-
-// webpack can only import JSON data that is inside an object
-// we want an array, since the nav elements have a natural ordering
-function processRawData(rawData) {
-    const navKeys = Object.keys(rawData);
-    const navElems = [];
-    for (let i = 0; i < navKeys.length; i += 1) {
-        navElems.push(Object.assign({ __name: navKeys[i] }, rawData[navKeys[i]]));
-    }
-    navElems.sort((a, b) => a.order - b.order);
-
-    return navElems;
-}
+import data from '../../data.json';
 
 ReactDOM.render(
-    <AppComponent data={processRawData(rawData)} />,
+    <BrowserRouter>
+        <Route path="/" render={(props) => <AppComponent data={data} {...props} />} />
+    </BrowserRouter>,
     document.querySelector('#root')
 );

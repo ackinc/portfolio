@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Verdana, sans-serif;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+#root {
+    display: flex;
+    
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}

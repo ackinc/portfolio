@@ -1,0 +1,110 @@
+main {
+    background-color: #1E1E1E;
+    
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1 0 0;
+}
+
+.tab-list {
+    background-color: #252526;
+    display: flex;
+    flex-direction: row;
+}
+
+.tab {
+    background-color: #2D2D2D;
+    color: white;
+    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    font-size: 0.8em;
+    
+    padding-left: 10px;
+    margin-right: 2px;
+    
+    opacity: 0.5;
+    
+    height: 40px;
+    width: 120px;
+}
+
+.tab.active {
+    background-color: #1E1E1E;
+    opacity: 1;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.tab a {
+    color: inherit;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    text-decoration: none;
+    
+    height: 100%;
+    width: 100%;
+}
+
+.tab .close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    right: 5px;
+    
+    height: 20px;
+    width: 20px;
+}
+
+.tab .close-btn img {
+    width: 8px;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100%;
+}
+
+#home .bg-logo {
+    text-align: center;
+}
+
+#home .bg-logo img {
+    max-width: 40vh;
+}
+
+#home ul {
+    margin-top: 50px;
+}
+
+#home ul li {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#home a {
+    color: #6a6a6a;
+    text-decoration: none;
+}
+
+#home a:hover {
+    color: white;
+}
+
+#about {
+    color: white;
+}
