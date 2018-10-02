@@ -49,9 +49,7 @@ class AppComponent extends React.Component {
 
             const newIdx = newTabs.length === 0 ?
                 null :
-                prevState.activeTabIdx === 0 || prevState.activeTabIdx < idx ?
-                    prevState.activeTabIdx :
-                    prevState.activeTabIdx - 1;
+                Math.min(prevState.activeTabIdx, newTabs.length - 1);
 
             this.props.history.push(`/${newTabs[newIdx]}`);
 
