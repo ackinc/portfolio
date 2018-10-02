@@ -47,9 +47,7 @@ class AppComponent extends React.Component {
             const newTabs = prevState.openedTabs.concat([]);
             newTabs.splice(idx, 1);
 
-            const newIdx = newTabs.length === 0 ?
-                null :
-                Math.min(prevState.activeTabIdx, newTabs.length - 1);
+            const newIdx = Math.min(prevState.activeTabIdx, newTabs.length - 1);
 
             this.props.history.push(`/${newTabs[newIdx]}`);
 
