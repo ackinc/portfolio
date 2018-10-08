@@ -1,25 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+
+import FileItemComponent from './fileItemComponent';
 
 export default function FileListComponent(props) {
     const files = props.files;
     return (
         <ul>
             {files.map(file => (
-                <li key={file.name} className={file.children ? 'folder' : ''}>
-                    <NavLink to={`/${file.name}`}>
-                        <img
-                            className="explorer-icon"
-                            src={`${file['explorer-icon']}`} />
-                        <span>
-                            {`${file.name}${file['explorer-extension']}`}
-                        </span>
-                        {/* {file.children ?
-                            <FileListComponent files={file.children} /> :
-                            null} */}
-                    </NavLink>
-                </li>
+                <FileItemComponent
+                    key={file.name}
+                    name={file.name}
+                    ext={file['explorer-extension']}
+                    icon={file['explorer-icon']}
+                    isActiveTab={props.activeTabName === file.name}
+                    openTab={props.openTab}
+                />
             ))}
         </ul>
     );
@@ -29,8 +25,7 @@ FileListComponent.propTypes = {
     files: PropTypes.arrayOf(PropTypes.shape({
         name: PropTypes.string.isRequired,
         'explorer-icon': PropTypes.string.isRequired,
-        'explorer-extension': PropTypes.string.isRequired,
-        children: PropTypes.array
+        'explorer-extension': PropTypes.string.isRequired
     })).isRequired,
-    prefixPath: PropTypes.string.isRequired
+    openTab: PropTypes.func,
 };

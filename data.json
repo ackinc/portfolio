@@ -45,8 +45,8 @@
     "projects": {
         "order": 2,
         "nav-icon": "./images/git-branch-alt-white-64x64.png",
-        "explorer-icon": "./images/icons/folder.svg",
-        "explorer-extension": "",
+        "explorer-icon": "./images/icons/json-file.svg",
+        "explorer-extension": ".json",
         "expandable": true,
         "data": [
             {

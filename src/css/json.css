@@ -1,0 +1,10 @@
+.rendered-json {
+  display: flex;
+
+  font-family: Courier, monospace;
+  font-size: 0.9em;
+}
+
+.rendered-json pre {
+  flex: 1 0 0;
+}

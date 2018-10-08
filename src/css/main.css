@@ -92,19 +92,12 @@ main {
 }
 
 #home ul li {
+    color: #6a6a6a;
     text-align: center;
     margin: 20px 0;
 }
 
-#home a {
-    color: #6a6a6a;
-    text-decoration: none;
-}
-
-#home a:hover {
+#home ul li:hover {
     color: white;
-}
-
-#about {
-    color: white;
+    cursor: pointer;
 }

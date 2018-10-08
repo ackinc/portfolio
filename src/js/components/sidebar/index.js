@@ -17,13 +17,18 @@ function SidebarComponent(props) {
     return (
         <aside>
             <NavComponent sections={sections} openTab={props.openTab} />
-            <ExplorerComponent data={props.data} openTab={props.openTab} />
+            <ExplorerComponent
+                data={props.data}
+                activeTabName={props.activeTabName}
+                openTab={props.openTab}
+            />
         </aside>
     );
 }
 
 SidebarComponent.propTypes = {
     data: PropTypes.object,
+    activeTabName: PropTypes.string,
     openTab: PropTypes.func,
     closeTab: PropTypes.func,
 };

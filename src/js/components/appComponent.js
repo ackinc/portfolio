@@ -27,10 +27,12 @@ class AppComponent extends React.Component {
                 };
             } else {
                 newState = {
+                    openedTabs: prevState.openedTabs,
                     activeTabIdx: idx,
                 };
             }
 
+            this.props.history.push(`/${newState.openedTabs[newState.activeTabIdx]}`);
             return newState;
         });
     }
@@ -63,6 +65,7 @@ class AppComponent extends React.Component {
             <React.Fragment>
                 <SidebarComponent
                     data={this.props.data}
+                    activeTabName={this.state.openedTabs[this.state.activeTabIdx]}
                     openTab={this.openTab}
                     closeTab={this.closeTab}
                 />
