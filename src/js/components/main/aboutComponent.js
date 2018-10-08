@@ -1,30 +1,21 @@
 import React from 'react';
 
-import renderjson from 'renderjson';
-renderjson.set_icons('', '').set_max_string_length(80).set_show_to_level('all');
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { tomorrowNight } from 'react-syntax-highlighter/styles/hljs';
 
-class AboutComponent extends React.Component {
-    componentDidMount() {
-        document.querySelector('#about-content').appendChild(renderjson(this.props.data));
-    }
-
-    render() {
-        const lineNums = [];
-        for (let i = 0; i < 23; i++) {
-            lineNums.push(i + 1);
-        }
-
-        return (
-            <div id="about">
-                <div id="gutter">
-                    {lineNums.map(n => <div>{n}</div>)}
-                </div>
-                <div id="about-content">
-
-                </div>
-            </div>
-        );
-    }
+function AboutComponent(props) {
+    return (
+        <div id="about">
+            <SyntaxHighlighter
+                language="javascript"
+                style={tomorrowNight}
+                customStyle={{ background: '#1E1E1E' }}
+                showLineNumbers="true"
+            >
+                {JSON.stringify(props.data, undefined, 2)}
+            </SyntaxHighlighter>
+        </div>
+    );
 }
 
 export default AboutComponent;
